@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*------------- This is the default css ----------------------*/
+.outer{
+		width:800px;
+	}
+
+/* ---------------------- RESPONSIVE STUFF - ONLY TOUCH IF YOUR'E CONFIDENT WITH CSS ---------------------- */
+
+/*------------- When your screen goes below 450px it will turn css to as below ----------------------*/
+
+@media only screen and (max-width: 450px) {
+	.outer{
+		width:212px;
+	}
+	
+}
+
+/* ------- END :) ------- */

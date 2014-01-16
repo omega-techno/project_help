@@ -1,0 +1,24 @@
+=============================== SELECT FROM DATABASE ===========================
+function getContent(){
+	include('../conf/conf.php');
+	global $gallery_list;
+	$sql="SELECT * FROM store_images";
+	$result=mysql_query($sql);
+	while($row=mysql_fetch_array($result)){
+		if($row['type']=='gallery'){
+			//echo 'ok';
+			$gallery_list[]=array('store_id'=>$row['store_id'],'path'=>$row['path'], 'image'=>$row['image'], 'type'=>$row['type']);
+		}
+	}
+	
+}
+
+
+====================== OUTPUT ==============================
+for($i=0;$i<sizeof($partner_list);$i++){
+		echo "<br/>".$partner_list[$i]['store_id'];
+		echo " ".$partner_list[$i]['path'];
+		echo " ".$partner_list[$i]['image'];
+		echo " ".$partner_list[$i]['type'];
+		echo " ".$partner_list[$i]['link'];
+	}

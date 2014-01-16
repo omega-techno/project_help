@@ -1,0 +1,5 @@
+
+
+--------------Search string inside quote-----------------
+
+title="[\w\W]*?"
