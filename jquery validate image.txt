@@ -1,0 +1,10 @@
+$("#file_gallery, #file_slideshow, #file_partner").change(function(e) {
+			var ext = $(this).val().split('.').pop().toLowerCase();  
+			if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1 && this.files[0].size<5000000) {
+			  $(this).val("");  
+				alert('Invalid image! Please upload file in the format jpeg,gif,png and \nsmaller than or equal to 5MB.');  
+				 
+			}else{
+				$("#submit").click();
+			}
+		});
